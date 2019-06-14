@@ -70,7 +70,6 @@ class FlappyBird extends Phaser.Scene {
 
 
     jump(): void {
-        // this.bird.angle = -20;
         if (this.bird.active != true) {
             return;
         }
@@ -115,7 +114,6 @@ class FlappyBird extends Phaser.Scene {
     }
 
     hitPipe(): void {
-        // this.restartGame()
         this.bird.setActive(false);
 
         this.timer.destroy();
@@ -123,7 +121,6 @@ class FlappyBird extends Phaser.Scene {
         this.pipes.children.each((p: Phaser.Physics.Arcade.Sprite) => {
             p.body.velocity.x = 0;
         })
-        // this.timer.
     }
 }
 
